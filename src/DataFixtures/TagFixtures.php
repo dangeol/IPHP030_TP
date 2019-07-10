@@ -17,11 +17,4 @@ class TagFixtures extends Fixture
             $manager->flush();
         }
     }
-
-    public function getDependencies()
-    {
-        return array(
-            UserFixtures::class,
-        );
-    }
 }

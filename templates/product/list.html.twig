@@ -1,0 +1,22 @@
+{# templates/product/list.html.twig #}
+{% extends 'layout.html.twig' %}
+
+{% block headline %} <h2>List of products</h2> {% endblock %}
+{% block content %}
+    {% for product in product %}
+        <a href="{{ path('product_list') }}">
+            <h3>{{ product.name }}</h3>
+            <p> price: € {{ product.price }} -- Likes: {{ product.likes }} </p>
+            {# {% if product.comments is not null %}
+                {% for comment in product.comments %}
+                    <li>
+                        <a href="#">
+                            {{ comment }}
+                        </a>
+                    </li>
+                {% endfor %}
+            {% endif %}
+            #}
+            </a>
+    {% endfor %}
+{% endblock %}

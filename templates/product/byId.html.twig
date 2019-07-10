@@ -1,0 +1,9 @@
+{# templates/product/byId.html.twig #}
+{% extends 'layout.html.twig' %}
+
+{% block headline %} <h2>Product by id</h2> {% endblock %}
+{% block content %}
+    <a href="{{ path('product_byId', {'id': product.id}) }}">
+        <p>article: {{ product.name }}, content: {{ product.price }}</p>
+    </a>
+{% endblock %}
