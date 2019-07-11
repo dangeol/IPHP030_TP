@@ -1,0 +1,10 @@
+{# templates/product/filter.html.twig #}
+{% extends 'layout.html.twig' %}
+
+{% block headline %} <h2>List of products</h2> {% endblock %}
+{% block content %}
+    <form method="get" action=".">
+        {{ form_rest(form) }}
+        <input type="submit" name="submit-filter" value="filter" />
+    </form>
+{% endblock %}
