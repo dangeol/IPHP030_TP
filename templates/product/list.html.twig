@@ -3,8 +3,12 @@
 
 {% block headline %} <h2>List of products</h2> {% endblock %}
 {% block content %}
+    <form method="get" action=".">
+        {{ form_rest(form) }}
+        <input type="submit" name="submit-filter" value="filter" />
+    </form>
     {% for product in product %}
-        <a href="{{ path('product_list') }}">
+        <a href="{{ path('product_list', {'slug': product.id}) }}">
             <h3>{{ product.name }}</h3>
             <p> price: € {{ product.price }} -- Likes: {{ product.likes }} </p>
             {# {% if product.comments is not null %}
