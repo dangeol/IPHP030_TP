@@ -6,6 +6,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "kilik/table": "^1.0",
+        "lexik/form-filter-bundle": "~5.0",
         "sensio/framework-extra-bundle": "^5.4",
         "symfony/apache-pack": "^1.0",
         "symfony/asset": "4.3.*",
