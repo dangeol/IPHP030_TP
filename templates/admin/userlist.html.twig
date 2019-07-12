@@ -1,0 +1,19 @@
+{# templates/admin/userlist.html.twig #}
+{% extends 'layout.html.twig' %}
+
+{% block headline %} <h2>List of users</h2> {% endblock %}
+{% block content %}
+    <table>
+        <tbody>
+        <tr><th>title</th><th>content</th></tr>
+        {% for user in user %}
+            <tr>
+                <td>{{ user.email }}</td>
+                <td>{{ user.roles[0] }}</td>
+                <td> <button type="button"><a href="{{ path('admin_edit_roles',{ user: user.id }) }}" >EDIT ROLE</a></button> </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

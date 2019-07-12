@@ -1,0 +1,10 @@
+{# templates/admin/roles.html.twig #}
+{% extends 'layout.html.twig' %}
+
+{% block headline %} <h2>Admin: edit roles</h2> {% endblock %}
+{% block content %}
+    <form method="get" action=".">
+        {{ form(form) }}
+        <input type="submit" name="submit-filter" value="filter" />
+    </form>
+{% endblock %}
